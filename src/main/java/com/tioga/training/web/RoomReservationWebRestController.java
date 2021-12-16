@@ -18,12 +18,14 @@ import com.tioga.training.business.service.ReservationService;
 public class RoomReservationWebRestController {
 
     private final ReservationService reservationService;
-    private final String reservation;
 
     @Autowired
-    public RoomReservationWebRestController(String reservation, ReservationService reservationService ) {
-        this.reservation = reservation;
+    public RoomReservationWebRestController(ReservationService reservationService ) {
         this.reservationService = reservationService;
     }
 
+    public List<RoomReservation> getRoomReservations(@RequestParam(name="date", required = false)String dateString){
+        Date date = DateUtils.createDateFromDateString(dateString);
+        return this.reservationService.getRoomReservationsForDate(date);
+    }
 }

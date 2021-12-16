@@ -1,6 +1,6 @@
 Changes  | Version
 ------------- | -------------
-
+Adding Rest Controller | 1.0.9 |
 Adding data.sql and schema.sql | 1.0.8 |
 Added attribute in ReservationService | 1.0.7
 Added Room Reservation | 1.0.6
