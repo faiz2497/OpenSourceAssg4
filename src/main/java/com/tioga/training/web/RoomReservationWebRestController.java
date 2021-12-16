@@ -19,7 +19,6 @@ public class RoomReservationWebRestController {
 
     private final ReservationService reservationService;
 
-    @Autowired
     public RoomReservationWebRestController(ReservationService reservationService) {
         this.reservationService = reservationService;
     }
