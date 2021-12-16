@@ -20,12 +20,8 @@ public class RoomReservationWebRestController {
     private final ReservationService reservationService;
 
     @Autowired
-    public RoomReservationWebRestController(ReservationService reservationService ) {
+    public RoomReservationWebRestController(ReservationService reservationService) {
         this.reservationService = reservationService;
     }
 
-    public List<RoomReservation> getRoomReservations(@RequestParam(name="date", required = false)String dateString){
-        Date date = DateUtils.createDateFromDateString(dateString);
-        return this.reservationService.getRoomReservationsForDate(date);
-    }
 }
